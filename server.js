@@ -26,7 +26,8 @@ app.use((req, res, next) => {
   next();
 });
 
-
+// images middleware
+app.use(express.static("public"));
 
 establishDbConnection().then(() => {
   app.listen(process.env.APP_PORT || 3000, () =>
