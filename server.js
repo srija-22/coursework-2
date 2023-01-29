@@ -20,7 +20,6 @@ app.use(function (req, res, next) {
 // body-parser middleware to parse incoming request bodies in JSON format
 app.use(parser.json());
 
-
 // logger middleware
 app.use((req, res, next) => {
   console.log({
