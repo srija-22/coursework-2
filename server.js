@@ -1,4 +1,6 @@
 const express = require("express");
+const { ObjectId } = require("mongodb");
+const parser = require("body-parser");
 const { establishDbConnection, accessDb } = require("./database");
 
 // start app
@@ -14,6 +16,10 @@ app.use(function (req, res, next) {
   );
   next();
 });
+
+// body-parser middleware to parse incoming request bodies in JSON format
+app.use(parser.json());
+
 
 // logger middleware
 app.use((req, res, next) => {
