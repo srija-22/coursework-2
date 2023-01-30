@@ -35,8 +35,8 @@ app.use((req, res, next) => {
 app.use(express.static("public"));
 
 establishDbConnection().then(() => {
-  app.listen(process.env.APP_PORT || 3000, () =>
-    console.log(`Server running on port: ${process.env.APP_PORT || 3000}`)
+  app.listen(process.env.PORT || 3000, () =>
+    console.log(`Server running on port: ${process.env.PORT || 3000}`)
   );
 });
 
