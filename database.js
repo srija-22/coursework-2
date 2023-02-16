@@ -3,7 +3,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb')
 let dbConnection;
 
 const databaseUri =
-  "mongodb+srv://Srija:rnMTZNM8utuTKB-@web-coursework-2.vjqikya.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://Srija:mimo2002@web-coursework-2.k7tkejv.mongodb.net/?retryWrites=true&w=majority";
 
 const establishDbConnection = async function () {
   dbConnection = await MongoClient.connect(databaseUri, {
@@ -17,7 +17,7 @@ const accessDb = function () {
   if (!dbConnection) {
     return
   }
-  return dbConnection.db("srija-coursework");
+  return dbConnection.db("coursework-2");
 };
 
 module.exports = { establishDbConnection, accessDb };
